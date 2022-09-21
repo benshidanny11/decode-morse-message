@@ -20,12 +20,13 @@ def decode_char(char)
     end
     actual_word
   end
-#   ------
+
 def decode_sentence(coded_sentence)
     msg = []
-    coded_sentence.split('   ').each do |word|
+    coded_sentence.split(' ').each do |word|
       msg.push(decode_word(word))
     end
     msg.join(' ')
   end
+
   puts decode_sentence('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
